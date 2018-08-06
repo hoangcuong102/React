@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.square {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 60px;
+  line-height: 34px;
+  text-align: center;
+  padding: 0px;
+  font-weight: bold;
+  margin-right: -1px;
+  margin-top: -1px;
+}
+
+.square:focus {
+  background: #ddd;
+  outline: none;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+.status {
+  font-size: 56px;
+}
+.game-board {
+  padding: 10% 40%;
+}
+.board {
+  width: 360px;
+}
+
+.game-info {
+  margin-left: 20px;
+}
