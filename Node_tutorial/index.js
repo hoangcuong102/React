@@ -22,4 +22,24 @@ app.get("/", function(req, res) {
   res.render("index", { title: "Guru99", message: "Welcome" });
 });
 
+var MongoClient = require("mongodb").MongoClient;
+
+var url = "mongodb://localhost";
+
+MongoClient.connect(
+  "mongodb://localhost",
+  function(err, client) {
+    if (err) throw err;
+
+    var db = client.db("Employees");
+
+    db.collection("Employees").find({}, function(findErr, result) {
+      if (findErr) throw findErr;
+      console.log("Connected");
+      console.log(result);
+      client.close();
+    });
+  }
+);
+
 var server = app.listen(3000, function() {});
